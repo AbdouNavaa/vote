@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-sm-12">
+    <mat-card>
+      <h2>List of Students</h2>
+      <table class="table table-bordered table-striped">
+        <tr>
+<!--          <td style="padding: 5px;">-->
+<!--            <input type="text"-->
+<!--                   [(ngModel)]="curetudiant.id"-->
+<!--                   class="form-control">-->
+<!--          </td>-->
+          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.ine"
+                   class="form-control">
+          </td>
+          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.nom"
+                   class="form-control">
+          </td>
+<!--          -->          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.prenom"
+                   class="form-control">
+          </td>
+          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.date"
+                   class="form-control">
+          </td>
+<!--          -->          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.email"
+                   class="form-control">
+          </td>
+          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.password"
+                   class="form-control">
+          </td>
+<!--          -->
+                    <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.inscription"
+                   class="form-control">
+          </td>
+          <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.niveau"
+                   class="form-control">
+          </td>
+<!--          -->
+                    <td style="padding: 5px;">
+            <input type="text"
+                   [(ngModel)]="curetudiant.etablisement"
+                   class="form-control">
+          </td>
+<!--          -->
+
+          <td style="padding: 5px;">
+            <button style="padding-left: 50%; padding-right: 50%;" class="btn btn-success"
+                    *ngIf="!curetudiant.id"
+                    [disabled]="
+                    !curetudiant.ine ||!curetudiant.nom || !curetudiant.prenom ||
+                    !curetudiant.date || !curetudiant.email ||
+                    !curetudiant.password || !curetudiant.inscription ||
+                    !curetudiant.niveau || !curetudiant.etablisement
+"
+                    (click)="save()">Ajouter</button>
+            <button style="padding-left: 50%; padding-right: 50%;" class="btn btn-dark"
+                    *ngIf="curetudiant.id"
+                    (click)="save()">Modifier</button>
+          </td>
+        </tr>
+        <tr>
+          <th>id</th>
+          <th>INE</th>
+          <th>Nom</th>
+          <th>PRENOM</th>
+          <th>DATE</th>
+          <th>EMAIL</th>
+          <th>PASSWORD</th>
+          <th>INSCRIPTION</th>
+          <th>NIVEAU</th>
+          <th>ETABLISSEMENT</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let etud of etudiants">
+          <td>{{etud.id}}</td>
+          <td>{{etud.ine}}</td>
+          <td>{{etud.nom}}</td>
+          <td>{{etud.prenom}}</td>
+          <td>{{etud.date}}</td>
+          <td>{{etud.email}}</td>
+          <td>{{etud.password}}</td>
+          <td>{{etud.inscription}}</td>
+          <td>{{etud.niveau}}</td>
+          <td>{{etud.etablisement}}</td>
+          <td>
+            <i class="fa fa-edit"
+               (click)="fillForm(etud)"
+               style="font-size: 25px"></i>&nbsp;&nbsp;
+            <i class="fa fa-trash"
+               (click)="delete(etud.id)"
+               style="font-size: 25px; color: orangered"></i>
+          </td>
+        </tr>
+        <tr *ngIf="!etudiants.length">
+          <td colspan="4"
+              class="text-center">Aucune etudière dans ce module
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</div>
