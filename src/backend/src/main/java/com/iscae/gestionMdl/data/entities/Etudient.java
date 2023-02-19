@@ -45,8 +45,8 @@ public class Etudient {
     @Column(name = "etablisement", nullable = false, length = 30)
     private String etablisement;
 
-    @OneToOne(mappedBy = "etudientByFkEtudient")
-    private Candidat candidatsById;
+    @OneToOne(mappedBy = "etudiantsByIdEtudient")
+    private CandidatEntity candidatsById;
     public EtudDto toEtudDto(Etudient etudient) {
         return EtudDto.builder()
                 .id(etudient.getId())

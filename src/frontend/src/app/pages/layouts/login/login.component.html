@@ -1,10 +1,9 @@
-<div class="row" style="margin-top: 200px">
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4">
-    <mat-card>
+<div class="row" style="margin-top: 100px;margin-left: 300px">
+  <div class="col-sm-6">
+    <mat-card-subtitle>
       <h1>Se connecter</h1>
-      <form class="example-form" [formGroup]="frmLogin">
-        <mat-form-field class="example-full-width" appearance="outline">
+      <form class="example-full-width" [formGroup]="frmLogin">
+        <mat-form-field class="example-form" appearance="standard">
           <mat-label>Login</mat-label>
           <input type="text" matInput
                  formControlName="login"
@@ -23,14 +22,14 @@
           </mat-error>
         </mat-form-field>
       </form>
-      <button mat-raised-button color="primary"
-              (click)="loginIn()">Se connecter
+      <button class="btn btn-dark"
+              (click)="loginIn()" style="width: 100%">Se connecter
       </button>
       <br>
       <br>
       <app-show-error [msg]="'Login et/ou mot passe incorrecte!'"
                       *ngIf="showError"></app-show-error>
-    </mat-card>
+    </mat-card-subtitle>
   </div>
   <div class="col-sm-4"></div>
 </div>

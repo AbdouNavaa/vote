@@ -30,19 +30,6 @@ const routes: Routes = [
           import('../gest-Synds/gest-mdl.module').then(
             (m) => m.GestSynd1Module
           ),
-      }, {
-        path: 'gestProf',
-        loadChildren: () =>
-          import('../gest-prof/gest-prof.module').then(
-            (m) => m.GestProfModule
-          ),
-      },
-      {
-        path: 'ProfForm',
-        loadChildren: () =>
-          import('../gest-prof/gest-prof.module').then(
-            (m) => m.GestProfModule
-          ),
       },
       {
         path: 'gestEtud',
@@ -58,13 +45,7 @@ const routes: Routes = [
             (m) => m.GestSyndicatModule
           ),
       },
-      {
-        path: 'gestCandats',
-        loadChildren: () =>
-          import('../gest-prof/gest-candidat.module').then(
-            (m) => m.GestCandidatModule
-          ),
-      },
+
     ]
   },
   {

@@ -30,14 +30,6 @@ public class ProfService {
                 .collect(Collectors.toList());
     }
 
-// public void add(MatiereDto matiereDto) {
-//        matiereRepository.save(matiereDto.toMatierEntity(matiereDto));
-//    }
-//
-//    public void update(MatiereDto matiereDto, Integer id) {
-//        MatiereEntity matiereEntity = matiereRepository.findById(id).orElseThrow();
-//        matiereRepository.save(matiereDto.toMatierEntity(matiereDto, matiereEntity));
-//    }
 
     public void add(RefDto refDto) {
         professeurRepository.save(refDto.toProfesseurEntity(refDto));

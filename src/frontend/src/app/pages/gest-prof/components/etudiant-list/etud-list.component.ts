@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {DialogConfirmComponent} from "../../../../common-elements/dialog-confirm/dialog-confirm.component";
-import {IEtudiant} from "../../models/etudiant";
 import {EtudiantService} from "../../services/etudiant.service";
+import {IEtudiant} from "../../models/etudiant";
 
 @Component({
   selector: 'app-matiere-list',

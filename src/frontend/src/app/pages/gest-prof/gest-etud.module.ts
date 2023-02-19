@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import {SharedModule} from "../../common/shared/shared.module";
 import {EtudListComponent} from "./components/etudiant-list/etud-list.component";
 import {GestEtudRoutingModule} from "./gest-etud-routing.module";
-import {ProfService} from "../gest-prof/services/prof.service";
 import {EtudiantService} from "./services/etudiant.service";
 
 

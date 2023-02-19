@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Abderrahmane
  */
 //@Data
-@Builder
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @Entity
 @Table(name = "syndicat1", schema = "iscae_sb_db", catalog = "")

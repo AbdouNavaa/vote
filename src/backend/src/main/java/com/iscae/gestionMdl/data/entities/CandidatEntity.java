@@ -104,7 +104,7 @@ public class CandidatEntity {
 
 
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_etudient", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
     public Etudient getEtudiantsByIdEtudient() {
         return etudiantsByIdEtudient;

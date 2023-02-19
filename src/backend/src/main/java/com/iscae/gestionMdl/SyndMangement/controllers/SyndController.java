@@ -3,9 +3,7 @@ package com.iscae.gestionMdl.SyndMangement.controllers;
 import com.iscae.gestionMdl.SyndMangement.dtos.Syndicat_Dto;
 import com.iscae.gestionMdl.SyndMangement.services.SyndicatService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,22 @@ public class SyndController {
     @GetMapping
     public List<Syndicat_Dto> getModules() {
         return service.getSynds();
+    }
+
+
+
+    @PostMapping
+    public void add(@RequestBody Syndicat_Dto syndicat_Dto) {
+        service.add(syndicat_Dto);
+    }
+
+    @PutMapping("/{id}")
+    public void update(@RequestBody Syndicat_Dto syndicat_Dto, @PathVariable("id") Integer id) {
+        service.update(syndicat_Dto, id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Integer id) {
+        service.delete(id);
     }
 }

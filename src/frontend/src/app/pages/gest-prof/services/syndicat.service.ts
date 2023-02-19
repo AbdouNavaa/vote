@@ -9,20 +9,20 @@ export class SyndicatService {
   }
 
   getSyndicats() {
-    return this.http.get<ISyndicat[]>("http://localhost:8080/synducat")
+    return this.http.get<ISyndicat[]>("http://localhost:8080/gest-synd")
   }
 
 
   update(curSyndicat: ISyndicat) {
-    return this.http.put("http://localhost:8080/synducat/" + curSyndicat.id, curSyndicat);
+    return this.http.put("http://localhost:8080/gest-synd/" + curSyndicat.id, curSyndicat);
   }
 
   add(curSyndicat: ISyndicat) {
-    return this.http.post("http://localhost:8080/synducat", curSyndicat);
+    return this.http.post("http://localhost:8080/gest-synd", curSyndicat);
   }
 
   delete(id: number) {
-    return this.http.delete("http://localhost:8080/synducat/" + id);
+    return this.http.delete("http://localhost:8080/gest-synd/" + id);
   }
 }
 
