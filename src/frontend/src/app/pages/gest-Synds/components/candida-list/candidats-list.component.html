@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-12">
     <mat-card>
-      <h2>Liste des matières</h2>
+      <h2>Liste des Candidats</h2>
       <table class="table table-bordered table-striped">
         <tr>
           <td style="padding: 5px;">
@@ -10,7 +10,7 @@
                    class="form-control">
           </td>
 
-          <td style="padding: 5px;">
+          <td style="padding: 15px;">
             <select class="form-control" [(ngModel)]="curCandidat.idEtudiant">
               <option [value]="prof.id"
                       *ngFor="let prof of etudiants">
@@ -19,11 +19,11 @@
             </select>
           </td>
           <td style="padding: 5px;">
-            <button class="btn btn-primary"
+            <button style="padding-left: 40%; padding-right: 30%;" class="btn btn-success"
                     *ngIf="!curCandidat.id"
                     [disabled]="!curCandidat.poste || !curCandidat.idEtudiant"
                     (click)="save()">Ajouter</button>
-            <button class="btn btn-success"
+            <button style="padding-left: 40%; padding-right: 30%;" class="btn btn-dark"
                     *ngIf="curCandidat.id"
                     (click)="save()">Modifier</button>
           </td>
@@ -47,7 +47,7 @@
         </tr>
         <tr *ngIf="!candidats.length">
           <td colspan="4"
-              class="text-center">Aucune Candidat dans ce module
+              class="text-center">Aucune Candidat dans ce Syndicat
           </td>
         </tr>
       </table>

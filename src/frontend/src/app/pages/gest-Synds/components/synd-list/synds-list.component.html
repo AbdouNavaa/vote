@@ -3,16 +3,15 @@
     <div *ngFor="let synd of synds; let i = index"
          class="mt-3">
       <mat-card>
-        <h2>{{synd.syndicat_nom}}</h2>
+        <h2 style="font-style: italic">{{synd.syndicat_nom}}</h2>
         <h3>{{synd.syndicat_type}}</h3>
-<!--        <h4>{{synd.coef}}</h4>-->
         <div class="row">
           <div class="col-sm-12"
                style="text-align: right">
-            <button [class]="i == curIndex ? 'btn btn-primary' : 'btn btn-link'"
+            <button [class]="i == curIndex ? 'btn btn-dark' : 'btn btn-link'"
                     (click)="showCand(synd.id, i)"
             >
-              Détails
+              Candidats
             </button>
           </div>
         </div>

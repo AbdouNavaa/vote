@@ -15,7 +15,7 @@ import java.util.Objects;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @Entity
-@Table(name = "candidat1", schema = "iscae_sb_db", catalog = "")
+@Table(name = "candidat", schema = "iscae_sb_db", catalog = "")
 public class CandidatEntity {
     private Integer id;
     private String poste;

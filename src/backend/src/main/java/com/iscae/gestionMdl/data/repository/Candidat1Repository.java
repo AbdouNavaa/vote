@@ -1,7 +1,6 @@
 package com.iscae.gestionMdl.data.repository;
 
 import com.iscae.gestionMdl.data.entities.CandidatEntity;
-import com.iscae.gestionMdl.data.entities.MatiereEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;

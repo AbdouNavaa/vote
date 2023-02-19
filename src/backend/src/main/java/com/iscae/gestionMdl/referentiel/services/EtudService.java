@@ -1,8 +1,6 @@
 package com.iscae.gestionMdl.referentiel.services;
 
 import com.iscae.gestionMdl.data.entities.Etudient;
-import com.iscae.gestionMdl.data.entities.ProfesseursEntity;
-import com.iscae.gestionMdl.data.repository.EtudRepo;
 import com.iscae.gestionMdl.data.repository.EtudRepo;
 import com.iscae.gestionMdl.referentiel.dtos.EtudDto;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {timer} from "rxjs";
 import {ISyndicat} from "../../models/Isynd";
-import {SyndicatService} from "../../../gest-prof/services/syndicat.service";
 import {Syndicat1Service} from "../../services/synd.service";
 
 @Component({

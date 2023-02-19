@@ -15,7 +15,7 @@ export class CandidatComponent implements OnInit {
   @Input("idSynd") idSynd: any;
   candidats: Icandidat[] = [];
   etudiants: IEtudiant[] = [];
-  curCandidat = <Icandidat>{}
+  curCandidat = <Icandidat>{};
 
   constructor(private syndicat1Service: Syndicat1Service,
               private etudiantService: EtudService,

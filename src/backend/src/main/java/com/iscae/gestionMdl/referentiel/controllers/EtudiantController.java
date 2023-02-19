@@ -2,7 +2,6 @@ package com.iscae.gestionMdl.referentiel.controllers;
 
 import com.iscae.gestionMdl.referentiel.dtos.EtudDto;
 import com.iscae.gestionMdl.referentiel.services.EtudService;
-import com.iscae.gestionMdl.referentiel.services.ProfService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

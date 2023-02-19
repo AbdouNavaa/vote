@@ -5,4 +5,10 @@ export interface Icandidat {
   idEtudiant: number;
   nomEtud: string;
 
+
+}
+export enum post {
+  'President',
+  'Adjoint',
+  'Secretaire'
 }
