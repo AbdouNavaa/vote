@@ -5,12 +5,14 @@
       <table class="table table-bordered table-striped">
         <tr>
           <td style="padding: 5px;">
+            <label>Poste</label>
             <input type="text"
                    [(ngModel)]="curCandidat.poste"
                    class="form-control">
           </td>
 
           <td style="padding: 15px;">
+            <label>Etudiants</label>
             <select class="form-control" [(ngModel)]="curCandidat.idEtudiant">
               <option [value]="prof.id"
                       *ngFor="let prof of etudiants">

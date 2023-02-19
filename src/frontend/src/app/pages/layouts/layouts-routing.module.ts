@@ -27,7 +27,7 @@ const routes: Routes = [
       {
         path: 'gestMdl',
         loadChildren: () =>
-          import('../gest-Synds/gest-mdl.module').then(
+          import('../gest-Synds/gest-synds.module').then(
             (m) => m.GestSynd1Module
           ),
       },
